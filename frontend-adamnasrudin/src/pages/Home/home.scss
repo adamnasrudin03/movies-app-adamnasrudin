@@ -1,0 +1,56 @@
+.home-page-wrapper {
+  padding-top: 30px;
+
+  .search-wrapper {
+    width: 250px;
+    margin-right: 10px;
+    margin-left: auto;
+
+    .autoContainer {
+      position: absolute;
+      border-width: 0px 1px 1px 1px;
+      background-color: whitesmoke;
+      right: 10px;
+      width: 250px;
+      border-radius: 8px;
+      border: 1px solid grey;
+      .option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 250px;
+        padding: 5px;
+      }
+
+      .option,
+      span {
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .filter {
+    display: flex;
+    margin: auto;
+  }
+  .pagination {
+    width: 400px;
+    display: flex;
+    margin: auto;
+  }
+
+  .text-page {
+    font-size: 38px;
+    width: 380px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+  }
+}

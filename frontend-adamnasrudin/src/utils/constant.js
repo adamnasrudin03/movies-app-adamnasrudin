@@ -1,0 +1,4 @@
+export const FIND_DATA_MOVIES = "FIND_DATA_MOVIES";
+export const FIND_PAGE_MOVIES = "FIND_PAGE_MOVIES";
+
+export const FIND_MOVIE = "FIND_MOVIE";

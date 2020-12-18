@@ -1,0 +1,11 @@
+.filter-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+    .filter-label {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+}

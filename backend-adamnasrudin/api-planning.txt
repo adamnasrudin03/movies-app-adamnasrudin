@@ -1,0 +1,91 @@
+Standar API
+
+[METHOD] : {root.api}/{grouping}/{endpoint}
+
+========================================================================================
+
+Standar Status Response
+
+200 - OK                        --> Call API Success
+201 - CREATED                   --> Post Success
+400 - BAD REQUEST               --> Error on Client Side (Bisa input yang salah dll).
+401 - UNAUTHORIZED              --> User not authorized to the request.
+403 - FORBIDDEN                 --> User not allowed to access.
+404 - NOT FOUND                 --> Request Endpoint Not Found.
+500 - INTERNAL SERVER ERROR     --> Error on Server Side
+502 - BAD GATEWAY               --> Invalid Response From Antoher Request
+
+
+========================================================================================
+
+
+GROUP: MOVIE
+
+[1] - Get list movie
+[GET] : {root.api}/{version}/movies
+[GET] : {root.api}/{version}/movies?page=1&perPage=2
+[GET] : {root.api}/{version}/movies?title=Refined&showTime=2019&page=1&perPage=2
+
+res:
+{
+  "status": "Success",
+  "message": "Find All successfully",
+  "data": [
+    {
+      "id": 5,
+      "showTime": "2019-10-26T18:25:48.902Z",
+      "title": "Refined Rubber Salad",
+      "image": "http://lorempixel.com/640/480/people",
+      "like": 56488,
+      "createdAt": "2020-12-18T04:04:06.000Z",
+      "updatedAt": "2020-12-18T04:04:06.000Z"
+    },
+    {
+      "id": 18,
+      "showTime": "2019-11-25T06:19:00.843Z",
+      "title": "Refined Fresh Sausages",
+      "image": "http://lorempixel.com/640/480/food",
+      "like": 56156,
+      "createdAt": "2020-12-18T04:04:06.000Z",
+      "updatedAt": "2020-12-18T04:04:06.000Z"
+    }
+  ],
+  "total_data": 9,
+  "data_perPage": 2,
+  "current_page": 1,
+  "total_page": 5
+}
+
+========================================================================================
+
+GROUP: MOVIE
+
+[1] - Get list movie by id
+[GET] : {root.api}/{version}/movies/:id
+
+res:
+{
+  "status": "Success",
+  "message": "Find by id 2 successfully",
+  "data": {
+    "id": 2,
+    "showTime": "2020-03-29T23:56:14.231Z",
+    "title": "Fantastic Soft Ball",
+    "image": "http://lorempixel.com/640/480/nature",
+    "like": 65273,
+    "createdAt": "2020-12-18T04:04:06.000Z",
+    "updatedAt": "2020-12-18T04:04:06.000Z"
+  }
+}
+
+========================================================================================
+
+GROUP: Error
+
+res:
+{
+  "status": "Error",
+  "message": "error message"
+}
+
+========================================================================================
